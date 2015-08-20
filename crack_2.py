@@ -15,5 +15,10 @@ print ("this is the mid-string:")
 print (base64_string)
 
 print ("try first way:")
+# print (base64.encode(base64_string))
 print (base64.b64encode(base64_string.encode(encoding="utf-8")))
+print (base64.urlsafe_b64encode(base64_string.encode(encoding="utf-8")))
+print (base64.standard_b64encode(base64_string.encode(encoding="utf-8")))
+
+
 
