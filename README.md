@@ -1,2 +1,2 @@
 # Python-cracking
-Python-cracking codes everyday!
+Python-cracking coding everyday!
