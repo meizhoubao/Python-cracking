@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 import base64
-
+import binascii
 # decode strings that skipped '='
 def safe_base64_decode(s):
     r = len(s)%4
@@ -9,11 +9,9 @@ def safe_base64_decode(s):
 
 # Convert hex to string
 def convert_hex_to_base64(hex_string):
-    base64_string = ""
-    for i in range(int(len(hex_string)/2)):
-        hae_chars = hex_string[i:i+2]
-        base64_string += chr(int(hex_chars,16))
-        i += 2
-    return base64.b64encode(base64_string.encode(encoding="utf-8"))
+    binary_string = binascii.a2b_hex(hex_string)
+    return base64.b64encode(binary_string)
+
     
+
 
